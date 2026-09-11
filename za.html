@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zahid Alam | Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+html{scroll-behavior:smooth}
+body{background:#0b1120;color:#fff}
+nav{position:fixed;top:0;width:100%;padding:15px 40px;
+display:flex;justify-content:space-between;background:#111827}
+nav a{color:#7dd3fc;text-decoration:none;margin-left:15px}
+section{min-height:100vh;padding:100px 10%}
+#home{display:flex;justify-content:center;align-items:center;
+background:linear-gradient(135deg,#0f172a,#2563eb);text-align:center}
+h1{font-size:55px} span{color:#7dd3fc}
+.btn{display:inline-block;margin-top:20px;padding:12px 22px;
+background:#38bdf8;color:#001;border-radius:30px;text-decoration:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#1e293b;padding:20px;border-radius:16px}
+input,textarea{width:100%;padding:10px;margin:8px 0;border:none;border-radius:8px}
+button{padding:10px 18px;background:#38bdf8;border:none;border-radius:8px}
+</style>
+</head>
+<body>
+
+<nav>
+<b>ZAHID</b>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section id="home">
+<div>
+<h1>Hi, I'm <span>Zahid Alam</span></h1>
+<h2 id="type"></h2>
+<p>Computer Science Student • NHIT</p>
+<a class="btn" href="#about">Explore</a>
+</div>
+</section>
+
+<section id="about">
+<h1>About Me</h1><br>
+<div class="grid">
+<div class="card"><h3>👤 Name</h3><p>Zahid Alam</p></div>
+<div class="card"><h3>📍 Address</h3><p>Itahar, Uttar Dinajpur</p></div>
+<div class="card"><h3>🎓 Study</h3><p>Diploma in Computer Science</p></div>
+<div class="card"><h3>💻 Dream</h3><p>Full Stack Developer</p></div>
+</div>
+</section>
+
+<section id="skills">
+<h1>My Skills</h1><br>
+<div class="grid">
+<div class="card">HTML ⭐⭐⭐⭐</div>
+<div class="card">CSS ⭐⭐⭐</div>
+<div class="card">JavaScript ⭐⭐</div>
+<div class="card">Python ⭐⭐⭐</div>
+</div>
+</section>
+
+<section id="contact">
+<h1>Contact Me</h1><br>
+<div class="card">
+<input placeholder="Your Name">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button onclick="send()">Send</button>
+<p id="msg"></p>
+</div>
+</section>
+
+<script>
+let t="Future Web Developer";
+let i=0;
+function type(){
+ if(i<t.length){
+  document.getElementById("type").innerHTML+=t.charAt(i);
+  i++;
+  setTimeout(type,70);
+ }
+}
+type();
+
+function send(){
+ document.getElementById("msg").innerHTML="✅ Thanks for visiting my portfolio!";
+}
+</script>
+
+</body>
+</html>
